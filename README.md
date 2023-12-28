@@ -1,2 +1,2 @@
-# U-vora
+# U-Évora
 Licenciatura em Engenharia Informática
