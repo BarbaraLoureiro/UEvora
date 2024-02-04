@@ -1,0 +1,17 @@
+Script started on 2023-09-29 12:54:47+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="101" LINES="55"]
+[?2004h]0;b4rbara@b4rbara-GF63-Thin-10SCSR: ~/Desktop/P3[01;32mb4rbara@b4rbara-GF63-Thin-10SCSR[00m:[01;34m~/Desktop/P3[00m$ gprolog 
+[?2004lGNU Prolog 1.4.5 (64 bits)
+Compiled Feb 23 2020, 20:14:50 with gcc
+By Daniel Diaz
+Copyright (C) 1999-2020 Daniel Diaz
+| ?- X=2.
+
+X = 2
+
+yes
+| ?- 
+
+[?2004h]0;b4rbara@b4rbara-GF63-Thin-10SCSR: ~/Desktop/P3[01;32mb4rbara@b4rbara-GF63-Thin-10SCSR[00m:[01;34m~/Desktop/P3[00m$ [?2004l
+exit
+
+Script done on 2023-09-29 12:55:11+01:00 [COMMAND_EXIT_CODE="0"]

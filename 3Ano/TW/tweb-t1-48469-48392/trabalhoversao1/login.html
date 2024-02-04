@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>FARMALENTEJO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <nav>
+            <h2>FARMALENTEJO</h2>
+            <div class="menu-btn">
+                <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
+            </div>
+
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="index.html">Farmácias</a></li>
+                <li><a href="index.html">Agendamentos</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- end header -->
+
+    <!-- inicio -->
+    <section class="slider">
+        
+    <button onclick="listarFarmaciasGripe()" >Listar Farmácias com Vacinação da Gripe</button>
+    <button onclick="listarFarmaciasCovid()" >Listar Farmácias com Vacinação para COVID-19</button>
+    
+    </section>
+    <div id="farmacia-lista2"></div>
+
+    <button onclick="getGraph();">Mostrar Gráfico</button>
+    <h3>Número de Farmácias por Localidade</h3>
+
+    <div id="g1"></div>
+
+    <section>
+        <div id="add-farmacia">
+            <h3>Adicionar farmácia:</h3>
+            <form>
+                <input type="text" id="addNome" placeholder="Nome da farmácia" required><br>
+                <input type="checkbox" id="add-gripe" /><label for="add-gripe">Gripe</label><br>
+                <input type="checkbox" id="add-covid" /><label for="add-covid">Covid-19</label><br>
+                <input type="button" onclick="adicionarFarmacia()" value="Adicionar">
+            </form>
+        </div>
+    
+        <div id="remove-farmacia">
+            <h3>Remover farmácia:</h3>
+            <form>
+                <input type="text" id="removeNome" placeholder="id da farmácia" required><br>
+                <input type="checkbox" id="remove-gripe" /><label for="remove-gripe">Gripe</label><br>
+                <input type="checkbox" id="remove-covid" /><label for="remove-covid">Covid-19</label><br>
+                <input type="button" onclick="removerFarmacia()" value="Remover">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul>
+                <h3>Bárbara Loureiro e Gustavo Gomes</h3>
+
+                <p>Tecnologias Web</p>
+
+                <p>Prof. José Saias</p>
+            </ul>
+            <ul>
+                <h3>Sobre nós</h3>
+                <p>Politíca de cookies</p>
+                <p>Politíca de proteção de dados</p>
+            </ul>
+            <ul>
+                <h3>Com o apoio de</h3>
+                <a href="https://www.farmaciasportuguesas.pt/"><img src="fp.png" alt="" style="width: 70%"></a>
+            </ul>
+            <ul>
+                <h3>Contactos</h3>
+                <p>+351 889 299 222</p>
+                <p>Évora 7000-500</p>
+                <p>Universidade de Évora</p>
+            </ul>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="script.js"></script>
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+        </script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+</body>
+
+</html>

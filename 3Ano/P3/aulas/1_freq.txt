@@ -1,0 +1,29 @@
+P3 - 1ª Frequência 2023
+ 
+ ex.1 - afirmações verdadeiras e falsa
+
+- Um termo só pode ser uma constante ou uma variável.
+- Um predicado é composto por uma ou mais regras, chamadas cláusulas.
+- Um termo composto tem um funtor principal e N subtermos.
+- Uma cláusula com o corpo vazio chama-se facto. 
+- Os termos p3(estudante,X) e p3(Y,finalista) são unificáveis.
+- Os termos '.'(1,'.'(2,[])) e [1,[2]] designam a mesma coisa.
+
+ ex.2 - Considere ... os numerais de Peano, ... já definidos os predicados de tipo(num/1), de soma(soma/3), de multiplicação(mult/3) e de comparação(le/2).
+
+ a) Defina um predicado de conviniência num/2 em que num(X,Y) sucede se X for o numeral correspondente ao inteiro Y. Exemplo: num(s(s(z)),X) sucede com X=2 e num(X,3) sucede com X=s(s(s(z)))
+
+ b) Defina um predicado divisivel/2 para o qual divisivel(X,Y) sucede X for divisivel por Y.
+
+ c) Defina um predicado min/3 para o qual min(A,B,C) sucede se C for menor de entre A e B.
+
+ ex.3 - Defina um predicado impares/2 em que impares(A,B) sucede se B for a lista composta pelos elementos de A em posições ímpares. Por exemplo ímpares([a,b,c,d,e],X) sucede com X=[a,c,e]
+ 
+ ex.4 - Considere uma lista com elementos potencialmente repetidos, queremos queremos filtrar essa lista guardando só os elementos que não se repetem.
+ 
+ a) Defina um predicado que realize isto (escolha um nome) especificando quantos argumentos aceita, e qual o significado de cada um (não é código)
+ 
+ b) Diga (em português) quais os casos "base" (quando é que a recursão termina) e como exprimir o caso recursivo
+ 
+ c) Implemente o predicado solicitado em Prolog(código)
+ 

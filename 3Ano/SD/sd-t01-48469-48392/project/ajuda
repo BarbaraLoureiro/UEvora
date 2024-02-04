@@ -1,0 +1,105 @@
+name=artistas
+host=localhost
+user=barbara
+password=123
+regHost=localhost
+regPort=9000
+regPortServer=9000
+
+psql artistas -U barbara -h localhost
+
+sdist=> \dt
+
+CREATE TABLE artistas (
+    aid serial PRIMARY KEY,
+    nome varchar NULL,
+    tipo varchar NULL,
+    estado varchar NULL
+);
+
+CREATE TABLE users (
+    uid serial PRIMARY KEY,
+    username varchar UNIQUE NOT NULL,
+    email varchar UNIQUE NOT NULL,
+    password varchar NOT NULL,
+    usertype NOT NULL
+);
+
+CREATE TABLE localizacoes (
+    lid serial PRIMARY KEY,
+    latitude DECIMAL(10, 8),
+    longitude DECIMAL(11, 8)
+);
+
+
+CREATE TABLE performances (
+    pid serial PRIMARY KEY,
+    aid int NOT NULL,
+    lid int NOT NULL,
+    pdata date NOT NULL,
+    FOREIGN KEY (aid) REFERENCES artistas (aid),
+    FOREIGN KEY (lid) REFERENCES localizacoes (lid)
+);
+
+CREATE TABLE donativos (
+    did serial PRIMARY KEY,
+    uid int NOT NULL,
+    aid int NOT NULL,
+    valor decimal NOT NULL,
+    ddata date NOT NULL,
+    FOREIGN KEY (aid) REFERENCES artistas (aid),
+    FOREIGN KEY (uid) REFERENCES users (uid)
+);
+
+
+INSERT INTO artistas (nome,tipo, atuar,estado) VALUES
+	 ('Maria','Dança','sim','aprovado'),
+	 ('André','Teatro','sim','desaprovado'),
+	 ('João','Dança','não','aprovado');
+	 
+INSERT INTO performances (artistid, data, localizacao) VALUES
+    (1, '2023-12-05', 'Évora'),
+    (2, '2023-12-06', 'Lisboa'),
+    (3, '2023-12-07', 'Aveiro'),
+    (2, '2023-08-27', 'Santarém'),
+    (1,'2023-06-03','Leiria');
+	 
+
+DROP TABLE artistas CASCADE;
+DROP TABLE performances CASCADE;
+DROP TABLE donativos CASCADE;
+
+DELETE FROM artistas
+WHERE condition;
+
+SELECT * FROM artistas;
+
+---------------------------------------------------------------------------------
+
+name=l48469
+host=alunos.di.uevora.pt
+user=l48469
+password=teste
+regHost=localhost
+regPort=9000
+regPortServer=9000
+
+psql l48469 -U l48469 -h alunos.di.uevora.pt
+teste
+
+---------------------------------------------------------------------------------
+## como compilar 1 trabalho:
+
+javac -d build/classes -classpath build/classes src/main/java/project/*.java
+
+rmiregistry -J-classpath -Jbuild/classes 9000
+
+java -classpath build/classes:recursos/postgresql-42.5.0.jar project.Server 
+
+java -classpath build/classes:recursos/postgresql-42.5.0.jar project.Cliente_geral
+
+java -classpath build/classes:recursos/postgresql-42.5.0.jar project.Cliente_gestao
+
+## como compilar 2 trabalho:
+
+criar bd e dar run no intelijii

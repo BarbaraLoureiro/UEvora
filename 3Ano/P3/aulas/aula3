@@ -1,0 +1,44 @@
+| ?- trace.
+The debugger will first creep -- showing everything (trace)
+
+yes
+{trace,1}
+| ?- soma(s(s(z)), s(s(z)), X).
+      1    1  Call: soma(s(s(z)),s(s(z)),_63) ? R
+Unknown command (type h for help)
+      1    1  Call: soma(s(s(z)),s(s(z)),_63) ? E
+Unknown command (type h for help)
+      1    1  Call: soma(s(s(z)),s(s(z)),_63) ? T
+Unknown command (type h for help)
+      1    1  Call: soma(s(s(z)),s(s(z)),_63) ? 
+      2    2  Call: soma(s(z),s(s(z)),_96) ? g
+Ancestors:
+      1    1  soma(s(s(z)),s(s(z)),s(_96))
+      2    2  Call: soma(s(z),s(s(z)),_96) ? 
+      3    3  Call: soma(z,s(s(z)),_123) ? g
+Ancestors:
+      1    1  soma(s(s(z)),s(s(z)),s(s(_123)))
+      2    2  soma(s(z),s(s(z)),s(_123))
+      3    3  Call: soma(z,s(s(z)),_123) ? 
+      4    4  Call: num(s(s(z))) ? g
+Ancestors:
+      1    1  soma(s(s(z)),s(s(z)),s(s(s(s(z)))))
+      2    2  soma(s(z),s(s(z)),s(s(s(z))))
+      3    3  soma(z,s(s(z)),s(s(z)))
+      4    4  Call: num(s(s(z))) ? 
+      5    5  Call: num(s(z)) ? 
+      6    6  Call: num(z) ? 
+      6    6  Exit: num(z) ? 
+      5    5  Exit: num(s(z)) ? 
+      4    4  Exit: num(s(s(z))) ? 
+      3    3  Exit: soma(z,s(s(z)),s(s(z))) ? 
+      2    2  Exit: soma(s(z),s(s(z)),s(s(s(z)))) ? 
+      1    1  Exit: soma(s(s(z)),s(s(z)),s(s(s(s(z))))) ? 
+
+X = s(s(s(s(z))))
+
+(1 ms) yes
+{trace,1}
+| ?- 
+
+

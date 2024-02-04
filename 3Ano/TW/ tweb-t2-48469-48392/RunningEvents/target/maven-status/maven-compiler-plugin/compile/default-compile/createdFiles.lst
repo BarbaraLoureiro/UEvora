@@ -1,0 +1,14 @@
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/dao/InscricaoDao.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/model/Inscricao.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/rowmapper/InscricaoRowMapper.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/rowmapper/EventoRowMapper.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/rowmapper/UserRowMapper.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/SpringSecurityFormBasedJdbcUserDetailsServiceAuthApp.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/dao/UserDao.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/controller/SpringSecurityController.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/service/UserAuthService.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/dao/EventoDao.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/config/SecurityConfig.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/model/Evento.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/config/DatabaseConfig.class
+com/roytuts/spring/boot/security/form/based/jdbc/userdetailsservice/auth/model/User.class

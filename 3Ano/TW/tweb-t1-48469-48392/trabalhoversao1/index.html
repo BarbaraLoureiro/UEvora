@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>FARMALENTEJO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Adicionando o CSS do Slick Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+</head>
+
+<body onload="getFarmacias(1)" >
+
+    <!-- header -->
+    <header>
+        <nav>
+            <h2>FARMALENTEJO</h2>
+            <div class="menu-btn">
+                <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
+            </div>
+
+            <ul>
+                <li><a href="#" class="active">Início</a></li>
+                <li><a href="#farmacia5">Farmácias</a></li>
+                <li><a href="#agendamentos">Agendamentos</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- end header -->
+
+    <!-- inicio -->
+    <section class="slider">
+        <div class="banner-text">
+            <h1> </h1>
+            <p> </p>
+        </div>
+    </section>
+    <!-- end inicio -->
+
+    <!-- farmácias -->
+    <section id="farmacia5" >
+        <h1>Farmácias</h1>
+        <b> 
+            <input id="name" type="text" 
+                   placeholder="Insere nome aqui">
+            <button onclick="filterFarmaciasByName()">Procurar</button>
+          </b>
+  
+        <div>
+            <label for="localidadeSelect">Filtrar por Localidade:</label>
+            <select id="localidadeSelect" onchange="filterFarmaciasByLocalidade()">
+              <option value="nada"></option>
+              <option value="Sacavém">Sacavém</option>
+              <option value="Lisboa">Lisboa</option>
+              <option value="Évora">Évora</option>
+              <option value="Ramada">Ramada</option>
+              <option value="Porto Salvo">Porto Salvo</option>
+              <option value="Aldeia de Paio Pires">Aldeia de Paio Pires</option>
+            </select>
+        </div>
+        <div>
+            <label for="covidVaccine">Vacina COVID</label>
+            <input type="radio" id="covidVaccine" name="vaccine" value="covid-19" onclick="searchVaccine()">
+            
+            <label for="fluVaccine">Vacina da Gripe</label>
+            <input type="radio" id="fluVaccine" name="vaccine" value="gripe" onclick="searchVaccine()">
+            
+        </div>
+        <button onclick="getFarmacias(1)" >Repor Filtros</button>
+        <div id="farmacia-lista"></div>
+        <div id="paginacao">
+            <button onclick="prePage()" >Página Anterior</button>
+            <button onclick="nextPage()" >Próxima Página</button>
+            
+            <p id="pagina">Página:</p>
+        </div>
+        <div id="detalhes-farmacia">
+
+        </div>
+    </section>
+    <!-- end farmácias -->
+
+    <!-- agendamentos -->
+    <section id="agendamentos">
+        <h1>Agendamentos</h1>
+        <input id="user" type="text" placeholder="Insere user_id aqui"><button onclick="listarAgendamentos()">listar</button>
+        <div id="lista-agendamentos">
+        <input id="remove" type="text" placeholder="Insere id agendamento aqui"><button onclick="tirarFarmacia()">remover</button>
+
+        
+    </section>
+    <!-- end agendamentos -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <ul>
+                <h3>Bárbara Loureiro e Gustavo Gomes</h3>
+
+                <p>Tecnologias Web</p>
+
+                <p>Prof. José Saias</p>
+            </ul>
+            <ul>
+                <h3>Sobre nós</h3>
+                <p>Politíca de cookies</p>
+                <p>Politíca de proteção de dados</p>
+            </ul>
+            <ul>
+                <h3>Com o apoio de</h3>
+                <a href="https://www.farmaciasportuguesas.pt/"><img src="fp.png" alt="" style="width: 50%"></a> 
+            </ul>
+            <ul>
+                <h3>Contactos</h3>
+                <p>+351 889 299 222</p>
+                <p>Évora 7000-500</p>
+                <p>Universidade de Évora</p>
+            </ul>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="script.js"></script>
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+        </script>
+</body>
+
+</html>
